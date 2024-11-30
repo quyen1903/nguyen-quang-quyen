@@ -26,7 +26,7 @@ các chức năng:
 9 xóa tài khoản
 chức năng phụ :
 log ra các hoạt động của db 
-trong file app.js có dòng code số 40
+trong file app.ts có dòng code số 40
 /* check for database connection */
 // CheckConnect.checkOverload()
 
