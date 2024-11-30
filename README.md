@@ -4,6 +4,8 @@ Framework Express
 MongoDB, ORM mongoose
 design pattern: singleton connect database
 
+hình chụp các api call đưuọc để trong folder image, anh có thể xem xét
+
 cách build:
 đầu tiên clone source code về với git clone sau đó npm i để thêm các package 
 tải mongodb về để lưu database, tải mongo compass để giám sát database
