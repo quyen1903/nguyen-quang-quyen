@@ -1,10 +1,10 @@
+---------------------------
 Technical Stack
 Nodejs, Typescript
 Framework Express
 MongoDB, ORM mongoose
 design pattern: singleton connect database
-
------------
+----------------------------
 ENVIROMENT VARIABLE
 .env
 
@@ -17,7 +17,6 @@ PRO_APP_PORT=3000
 PRO_DB_HOST=localhost
 PRO_DB_PORT=27017
 PRO_DB_NAME=pro-nguyenquangquyen
------------
 
 How to Build:
 Clone the source code using git clone, then run npm i to install the necessary packages.
