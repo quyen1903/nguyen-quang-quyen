@@ -23,8 +23,10 @@ Clone the source code using git clone, then run npm i to install the necessary p
 Download MongoDB to store the database and install Mongo Compass to monitor the database.
 Make sure to place the .env file in the root folder of the project.
 There are two ways to run the code:
+
 First: Compile the TypeScript code using tsc to convert it into JavaScript, then run npm run start as usual.
 Second: Run directly using the ts-node server.ts command.
+
 Features:
 Register
 Login
@@ -43,6 +45,7 @@ Copy code
 /* check for database connection */
 // CheckConnect.checkOverload()
 Uncomment this line to check both the database connection and CPU/RAM usage.
+
 Data Flow:
 When a specific route is triggered, the corresponding controller handles the code.
 Data coming from the route is validated via DTO (Data Transfer Object). I have also written two separate files to validate the username and password.
@@ -50,6 +53,7 @@ If valid, the data is passed to the service to handle business logic. If invalid
 The service processes the business logic and sends the data to the repository, which interacts directly with the database.
 Once the repository is done, it sends the data back to the service, which then returns it to the controller.
 The controller will respond to the user. The folder handling request or response errors is Core.
+
 Business Logic:
 User registration: The password is salted and hashed before being stored in the database. The token pair (access/refresh tokens) is returned. Both the salted password and the hashed password are stored in the database, and the real password is not accessible.
 Login: The salt is retrieved from the database, and the same hashing function is applied to compare the salted and hashed password with the one stored in the database. If they match, new tokens (access/refresh) are returned.
@@ -62,6 +66,7 @@ Account Search: A full-text search index is applied to the fullname field to sea
 Read Account: Since the username is sensitive, token-based authentication is required to read the account data.
 Delete Account: Deleting an account requires valid token authentication.
 Token Authentication in Routes:
+
 In routes, any route placed above the following line of code will not require token authentication:
 typescript
 Copy code
